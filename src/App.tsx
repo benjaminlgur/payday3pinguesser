@@ -68,10 +68,7 @@ function App() {
         </div>
       ) : null}
       <div className="centered-container">
-        <img
-          src=".\public\genseccardnorm.svg"
-          alt="SVG Image"
-          />
+        <img src="./genseccardnorm.svg" alt="SVG Image" />
       </div>
     </>
   );
