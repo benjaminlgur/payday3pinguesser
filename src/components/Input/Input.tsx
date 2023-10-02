@@ -18,21 +18,23 @@ const Input: React.FC<Props> = ({ onFormSubmit }) => {
     setValue(e.target.value);
   };
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      className="form-inline centered-container"
-    >
-      <input
-        type="text"
-        value={value}
-        onChange={handleInputChange}
-        className="form-control mb-2 mr-sm-2"
-        placeholder="Type something"
-      />
-      <Button onClick={handleFormSubmit} className="submit-button">
-        Submit
-      </Button>
-    </form>
+    <div className="input-wrapper">
+      <form
+        onSubmit={handleFormSubmit}
+        className="form-inline centered-container"
+      >
+        <input
+          type="text"
+          value={value}
+          onChange={handleInputChange}
+          className="form-control mb-2 mr-sm-2"
+          placeholder="Enter the fingerprint numbers here"
+        />
+        <Button onClick={handleFormSubmit} className="submit-button">
+          Submit
+        </Button>
+      </form>
+    </div>
   );
 };
 

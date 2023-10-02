@@ -1,3 +1,8 @@
 .submit-button {
   margin-bottom: 9px;
 }
+
+.input-wrapper {
+  padding-bottom: 10px;
+  min-width: 30%;
+}

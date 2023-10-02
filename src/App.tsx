@@ -31,6 +31,7 @@ function App() {
     try {
       setChecklistItems(generatePins(value));
       setInputVisible(false);
+      setErrorVisable(false);
     } catch (error) {
       setErrorVisable(true);
       console.log(error);
@@ -66,6 +67,12 @@ function App() {
           <p>Enter only 3 or 4 non repeating digits from vault fingerprints</p>
         </div>
       ) : null}
+      <div className="centered-container">
+        <img
+          src=".\public\genseccardnorm.svg"
+          alt="SVG Image"
+          />
+      </div>
     </>
   );
 }
