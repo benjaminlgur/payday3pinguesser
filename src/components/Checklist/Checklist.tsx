@@ -32,27 +32,30 @@ const Checklist = (props: Props) => {
     <>
       <div className="centered-container">
         <Form className="checklist-form">
-          {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="checklist-column">
-              {column.map((item, index) => (
-                <div key={index} className="form-check">
-                  <input
-                    type="checkbox"
-                    id={`checkbox-${columnIndex}-${index}`}
-                    className="form-check-input"
-                    checked={checkedItems[item] || false}
-                    onChange={handleCheck(item)}
-                  />
-                  <label
-                    htmlFor={`checkbox-${columnIndex}-${index}`}
-                    className="form-check-label"
-                  >
-                    {item}
-                  </label>
+          {columns.map(
+            (column, columnIndex) =>
+              column.length > 0 && ( // Check if column has items
+                <div key={columnIndex} className="checklist-column">
+                  {column.map((item, index) => (
+                    <div key={index} className="form-check">
+                      <input
+                        type="checkbox"
+                        id={`checkbox-${columnIndex}-${index}`}
+                        className="form-check-input"
+                        checked={checkedItems[item] || false}
+                        onChange={handleCheck(item)}
+                      />
+                      <label
+                        htmlFor={`checkbox-${columnIndex}-${index}`}
+                        className="form-check-label"
+                      >
+                        {item}
+                      </label>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          ))}
+              )
+          )}
         </Form>
       </div>
     </>

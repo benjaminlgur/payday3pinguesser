@@ -64,7 +64,9 @@ function App() {
       )}
       {errorVisable ? (
         <div className="centered-container">
-          <p>Enter only 3 or 4 non repeating digits from vault fingerprints</p>
+          <p>
+            Enter only 2, 3, or 4 non repeating digits from vault fingerprints
+          </p>
         </div>
       ) : null}
       <div className="centered-container">
